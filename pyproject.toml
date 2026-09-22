@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "classcale-social"
+version = "0.1.0"
+description = "Collecteur d'evenements crypto publics pour Classcale"
+readme = "docs/x-collector.md"
+requires-python = ">=3.11"
+license = { text = "Proprietary" }
+dependencies = [
+  "twscrape==0.20.1",
+]
+
+[project.scripts]
+classcale-social = "classcale.social.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["classcale"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

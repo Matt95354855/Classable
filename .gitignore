@@ -1,4 +1,4 @@
-# Secrets
+# Secrets and X session material
 .env
 .env.*
 !.env.example
@@ -6,6 +6,14 @@
 *.key
 *credentials*.json
 *secrets*.json
+cookies*.txt
+
+# Runtime data
+data/
+*.db
+*.db-shm
+*.db-wal
+*.log
 
 # Python
 __pycache__/
@@ -19,7 +27,6 @@ __pycache__/
 Data/
 Results/
 Storage/
-*.log
 
 # IDE and OS
 .vscode/
