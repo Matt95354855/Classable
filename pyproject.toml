@@ -10,15 +10,18 @@ readme = "docs/x-collector.md"
 requires-python = ">=3.11"
 license = { text = "Proprietary" }
 dependencies = [
-  "twscrape==0.20.1",
+  "playwright>=1.55,<2",
 ]
+
+[project.optional-dependencies]
+legacy-x = ["twscrape==0.20.1"]
 
 [project.scripts]
 classcale-social = "classcale.social.cli:main"
+classcale-x-agent = "classcale.social.agent_cli:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["classcale"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-

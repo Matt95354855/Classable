@@ -10,6 +10,7 @@ cookies*.txt
 
 # Runtime data
 data/
+playwright/.auth/
 *.db
 *.db-shm
 *.db-wal

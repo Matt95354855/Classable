@@ -16,15 +16,17 @@ cd Classable
 git submodule update --init --recursive
 ```
 
-## Collecteur d'evenements X
+## Agent navigateur X
 
-Le paquet `classcale.social` collecte des publications crypto depuis une liste de sources controlees et des recherches thematiques. Il classe les incidents de securite, changements reglementaires, listings, pannes, mises a jour reseau et autres evenements significatifs, puis les deduplique dans SQLite.
+Le paquet `classcale.social` contient un agent de recherche qui ouvre reellement les pages visibles de `x.com` dans Chromium. Un LLM local via Ollama choisit les recherches et les comptes autorises a consulter. L'agent classe ensuite les incidents de securite, changements reglementaires, listings, pannes, mises a jour reseau et autres evenements significatifs, puis les deduplique dans SQLite.
 
-Consulter [la documentation du collecteur](docs/x-collector.md) pour l'installation, l'import local des cookies et les commandes disponibles.
+Consulter [la documentation de l'agent](docs/x-browser-agent.md) pour l'installation, la connexion manuelle et les commandes disponibles.
 
 ```bash
 pip install -e .
-classcale-social --config config/x-collector.example.json once
+playwright install chromium
+classcale-x-agent --config config/x-browser-agent.example.json login
+classcale-x-agent --config config/x-browser-agent.example.json once
 ```
 
 ## Perimetre initial

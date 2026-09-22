@@ -1,0 +1,44 @@
+{
+  "database_path": "data/x_events.db",
+  "poll_interval_seconds": 300,
+  "min_event_score": 7,
+  "browser": {
+    "profile_path": "data/x-browser-profile",
+    "headless": false,
+    "max_pages_per_cycle": 8,
+    "max_scrolls_per_page": 3,
+    "post_limit_per_page": 40,
+    "page_timeout_seconds": 45,
+    "scroll_pause_ms": 2000
+  },
+  "llm": {
+    "enabled": true,
+    "endpoint": "http://127.0.0.1:11434",
+    "model": "qwen3:8b",
+    "max_queries": 6,
+    "timeout_seconds": 60
+  },
+  "seed_queries": [
+    "bitcoin BTC hack exploit outage ETF regulation",
+    "ethereum ETH exploit upgrade outage ETF",
+    "solana SOL outage exploit upgrade",
+    "crypto SEC CFTC court lawsuit approval enforcement",
+    "crypto exchange listing delisting insolvency reserves"
+  ],
+  "sources": [
+    {"username": "SECGov", "tier": "regulator", "score": 5},
+    {"username": "CFTC", "tier": "regulator", "score": 5},
+    {"username": "coinbase", "tier": "exchange", "score": 4},
+    {"username": "binance", "tier": "exchange", "score": 4},
+    {"username": "krakenfx", "tier": "exchange", "score": 4},
+    {"username": "okx", "tier": "exchange", "score": 4},
+    {"username": "ethereum", "tier": "protocol", "score": 4},
+    {"username": "solana", "tier": "protocol", "score": 4},
+    {"username": "Ripple", "tier": "protocol", "score": 4},
+    {"username": "BNBCHAIN", "tier": "protocol", "score": 4},
+    {"username": "CoinDesk", "tier": "media", "score": 3},
+    {"username": "TheBlock__", "tier": "media", "score": 3},
+    {"username": "WuBlockchain", "tier": "media", "score": 3}
+  ]
+}
+

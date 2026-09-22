@@ -1,5 +1,7 @@
 # Collecteur X d'evenements crypto
 
+> Ancien connecteur optionnel. Le chemin recommande est maintenant l'agent Playwright documente dans `docs/x-browser-agent.md`.
+
 Ce service collecte des publications X relatives aux principaux crypto-actifs, puis ne conserve que les contenus correspondant a un evenement identifiable et suffisamment fiable.
 
 Il utilise `twscrape` 0.20.1 avec les cookies d'un unique compte X appartenant a l'operateur. Il ne contourne pas les CAPTCHA, ne cree pas de comptes, ne fait pas tourner de comptes ou de proxies et n'essaie pas de depasser les limites imposees par X.
@@ -76,4 +78,3 @@ Les types initiaux sont : incident de securite, regulation, listing, changement 
 Les publications retenues sont stockees dans `data/x_events.db`. La base applique une contrainte unique sur l'identifiant X et sur l'empreinte du contenu pour eviter les doublons.
 
 Le repertoire `data/`, les bases SQLite, cookies, secrets et journaux sont ignores par Git.
-
