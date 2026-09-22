@@ -1,0 +1,15 @@
+{
+  "name": "classcale-major-crypto-v1",
+  "selection": {
+    "method": "static",
+    "assets": ["BTC", "ETH", "SOL", "XRP", "BNB"],
+    "quote_currency_priority": ["USD", "USDT"],
+    "exclude_stablecoins": true,
+    "require_spot_market": true
+  },
+  "execution": {
+    "mode": "paper",
+    "allow_live_trading": false
+  },
+  "notes": "Canonical assets only. Exchange-specific symbols will be resolved by an adapter."
+}
